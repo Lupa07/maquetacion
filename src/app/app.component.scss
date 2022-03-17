@@ -1,4 +1,11 @@
+#esqueletoCompleto{
+    margin-left: 50px;
+    margin-right: 50px;
+
+}
 #cabecera{
+
+    padding: 10px 5px 10px 5px;
     background-color: green;
     justify-content:center
 }
@@ -19,4 +26,6 @@ background-color: aquamarine;
 #tabla{
 background-color: yellowgreen;
 width: 100%;
+overflow: scroll;
+overflow-x:hidden
 }
