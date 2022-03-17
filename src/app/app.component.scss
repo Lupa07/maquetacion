@@ -1,31 +1,80 @@
-#esqueletoCompleto{
-    margin-left: 50px;
-    margin-right: 50px;
+//** DISPLAY FLEX **//
 
-}
-#cabecera{
-
-    padding: 10px 5px 10px 5px;
-    background-color: green;
-    justify-content:center
-}
-
-#contenido{
-    width: 100%;
-    height: 900px;
-    background-color: bisque;
+.contenedor-principal-flex{
     display: flex;
-}
-
-#filtro{
-width: 250px;
-height: 100%;
-background-color: aquamarine;
-
-}
-#tabla{
-background-color: yellowgreen;
-width: 100%;
-overflow: scroll;
-overflow-x:hidden
-}
+    flex-direction: column;
+    .contenedor-cabecera{
+      background-color: yellow;
+      flex: auto;
+    }
+    .contenedor-necesario-para-flex{
+      background-color: blue;
+      flex: 1;
+  
+      display: flex;
+      flex-direction: row;
+      .contenedor-filtros{
+        background-color: green;
+        flex:2;
+      }
+      .contenedor-tabla{
+        background-color: blueviolet;
+        flex: 8;
+      }
+    }
+  }
+  
+  //** DISPLAY GRID **//
+  
+  .contenedor-principal-grid{
+    display: grid;
+    grid-template-rows: auto 1fr;
+    .contenedor-cabecera{
+      background-color: yellowgreen;
+    }
+    .contenedor-necesario-para-flex{
+      background-color: darkseagreen;
+      display: grid;
+      grid-template-columns: 2fr 8fr;
+      .contenedor-filtros{
+        background-color: lightpink;
+      }
+      .contenedor-tabla{
+        background-color: cadetblue;
+      }
+    }
+  }
+  
+  //** COMUNES **//
+  
+  .contenedor-principal{
+    background-color: maroon;
+    height: 100vh;
+  
+    .contenedor-cabecera{
+      height: 50px;
+      max-height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      *:first-child{
+        color: cadetblue;
+        font-weight: bold;
+        font-family: monospace!important;
+        font-size: 1.8rem;
+      }
+    }
+  
+    .contenedor-necesario-para-flex{
+      height: 100%;
+      overflow-y: hidden;
+      .contenedor-filtros{
+        height: 100%;
+        overflow-y: auto;
+      }
+      .contenedor-tabla{
+        height: 100%;
+        overflow-y: auto;
+      }
+    }
+  }
