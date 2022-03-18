@@ -5,11 +5,13 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
+
 export class AppComponent {
   bandera : boolean = false;
   estilo : string = 'GRID';
   datos : number[] = [1,2,3,4,5];
 
+ 
   cambiaDatos(){
     if(this.bandera){
       this.datos = [1,2,3,4,5];
